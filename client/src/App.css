@@ -6,13 +6,17 @@
 }
 
 header {
-  margin: 2%;
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+  flex-flow: column;
   height: 60%;
   border-style: double;
 }
 
 .App {
   width: 100%;
+  margin: 2%;
 }
 
 .header-wrapper {
