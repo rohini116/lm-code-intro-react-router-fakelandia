@@ -37,6 +37,8 @@
   },
   "homepage": "https://github.com/rohini116/lm-code-intro-react-router-fakelandia#readme",
   "devDependencies": {
+    "@testing-library/jest-dom": "^5.16.5",
+    "@testing-library/react": "^14.0.0",
     "@types/cors": "^2.8.13"
   }
 }
