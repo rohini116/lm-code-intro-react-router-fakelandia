@@ -10,7 +10,7 @@ header {
   justify-content: space-around;
   width: 100%;
   flex-flow: column;
-  height: 60%;
+  height: 80px;
   border-style: double;
 }
 
@@ -19,18 +19,41 @@ header {
   margin: 2%;
 }
 
-.header-wrapper {
+.header__wrapper {
   height: inherit;
   padding: 2%;
 }
 
-.header-wrapper a {
+.header__wrapper a {
   float: left;
-  width: 10%;
+  width: 25%;
+  display: inline-flex;
+  align-items: center;
 }
 
-.header-wrapper nav {
+.header__wrapper nav {
   display: flex;
   flex-direction: row;
-  justify-content: space-around;
+  justify-content: space-between;
+  width: 75%;
+  height: 70px;
+  align-items: center;
+}
+
+.nav-active:hover {
+  color: blueviolet;
+}
+
+main {
+  margin-top: 10%;
+}
+
+.misdemeanours__select{
+  background-color: #ffffff;
+    color: #242424;
+    margin: 20px;
+}
+
+.misdemeanours__table{
+  width: 100%;
 }

@@ -11,13 +11,13 @@ import Router from './Components/Router';
 function App() {
   return (
     <div className="App">
-      <Header></Header>
-      <main>
-        <BrowserRouter>
+      <BrowserRouter>
+        <Header></Header>
+        <main>
           <Router></Router>
-        </BrowserRouter>
-      </main>
-      <Footer></Footer>
+        </main>
+        <Footer></Footer>
+      </BrowserRouter>
     </div>
   );
 }

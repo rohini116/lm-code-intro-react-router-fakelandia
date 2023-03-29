@@ -1,6 +1,6 @@
 import Home from "./Home";
 import { Routes, Route } from "react-router-dom";
-import Misdemeanours from "./Misdemeanours";
+import Misdemeanours from "./Misdemeanours/Misdemeanours";
 import Confession from "./Confession";
 import NotFound from "./NotFound";
 
