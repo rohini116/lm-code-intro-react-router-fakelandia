@@ -38,33 +38,40 @@ const Misdemeanours: React.FC = () => {
   return (
     <MisDataContext.Provider value={misdemeanourData}>
       <section>
-        <MisdemeanoursSelect  filterData = {filterData}    
+        <MisdemeanoursSelect
+          filterData={filterData}
           setFilterEvent={setSelectedFilter}
         ></MisdemeanoursSelect>
         <table className="misdemeanours__table">
-          <tr>
-            <th>Citizen ID</th>
-            <th>Date</th>
-            <th>Misdemeanours</th>
-            <th>Punishment Idea</th>
-          </tr>
-          {selectedFilter !== "All"
-            ? misdemeanourData
-                .filter((mis) => mis.misdemeanour.includes(selectedFilter))
-                .map((el) => (
+          <thead>
+            <tr>
+              <th>Citizen ID</th>
+              <th>Date</th>
+              <th>Misdemeanours</th>
+              <th>Punishment Idea</th>
+            </tr>
+          </thead>
+          <tbody>
+            {selectedFilter !== "All"
+              ? misdemeanourData
+                  .filter((mis) => mis.misdemeanour.includes(selectedFilter))
+                  .map((el) => (
+                    <MisdemeanoursList
+                      citizenId={el.citizenId}
+                      date={el.date}
+                      misdemeanour={el.misdemeanour}
+                      key={el.citizenId}
+                    ></MisdemeanoursList>
+                  ))
+              : misdemeanourData.map((el) => (
                   <MisdemeanoursList
                     citizenId={el.citizenId}
                     date={el.date}
                     misdemeanour={el.misdemeanour}
+                    key={el.citizenId}
                   ></MisdemeanoursList>
-                ))
-            : misdemeanourData.map((el) => (
-                <MisdemeanoursList
-                  citizenId={el.citizenId}
-                  date={el.date}
-                  misdemeanour={el.misdemeanour}
-                ></MisdemeanoursList>
-              ))}
+                ))}
+          </tbody>
         </table>
       </section>
     </MisDataContext.Provider>
